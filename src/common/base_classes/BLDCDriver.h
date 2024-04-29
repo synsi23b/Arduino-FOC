@@ -1,8 +1,8 @@
 #ifndef BLDCDRIVER_H
 #define BLDCDRIVER_H
 
-#include "Arduino.h"
 
+#include <synhal.h>
 
 enum PhaseState : uint8_t {
   PHASE_OFF = 0, // both sides of the phase are off

@@ -2,7 +2,7 @@
 #ifndef __SIMPLEFOCDEBUG_H__
 #define __SIMPLEFOCDEBUG_H__
 
-#include "Arduino.h"
+#include <synhal.h>
 
 
 /**
@@ -37,20 +37,20 @@
 
 class SimpleFOCDebug {
 public:
-    static void enable(Print* debugPrint = &Serial);
+    static void enable(Print* debugPrint);
 
-    static void println(const __FlashStringHelper* msg);
+    //static void println(const __FlashStringHelper* msg);
     static void println(const char* msg);
-    static void println(const __FlashStringHelper* msg, float val);
+    //static void println(const __FlashStringHelper* msg, float val);
     static void println(const char* msg, float val);
-    static void println(const __FlashStringHelper* msg, int val);
+    //static void println(const __FlashStringHelper* msg, int val);
     static void println(const char* msg, int val);
     static void println();
     static void println(int val);
     static void println(float val);
 
     static void print(const char* msg);
-    static void print(const __FlashStringHelper* msg);
+    //static void print(const __FlashStringHelper* msg);
     static void print(int val);
     static void print(float val);
 
@@ -60,7 +60,7 @@ protected:
 
 
 #define SIMPLEFOC_DEBUG(msg, ...) \
-    SimpleFOCDebug::println(F(msg), ##__VA_ARGS__)
+    SimpleFOCDebug::println(msg, ##__VA_ARGS__)
 
 
 

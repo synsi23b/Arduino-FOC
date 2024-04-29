@@ -13,11 +13,11 @@ MagneticSensorAnalog::MagneticSensorAnalog(uint8_t _pinAnalog, int _min_raw_coun
   min_raw_count = _min_raw_count;
   max_raw_count = _max_raw_count;
 
-  if(pullup == Pullup::USE_INTERN){
-    pinMode(pinAnalog, INPUT_PULLUP);
-  }else{
-    pinMode(pinAnalog, INPUT);
-  }
+  //if(pullup == Pullup::USE_INTERN){
+  //  pinMode(pinAnalog, INPUT_PULLUP);
+  //}else{
+  //  pinMode(pinAnalog, INPUT);
+  //}
 
 }
 

@@ -1,5 +1,5 @@
 #include "LowsideCurrentSense.h"
-#include "communication/SimpleFOCDebug.h"
+#include "../communication/SimpleFOCDebug.h"
 // LowsideCurrentSensor constructor
 //  - shunt_resistor  - shunt resistor value
 //  - gain  - current-sense op-amp gain

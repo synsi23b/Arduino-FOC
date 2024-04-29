@@ -1,4 +1,5 @@
 #include "time_utils.h"
+#include <synhal.h>
 
 // function buffering delay() 
 // arduino uno function doesn't work well with interrupts
@@ -26,6 +27,7 @@ unsigned long _micros(){
     else return (micros());
 #else
   // regular micros
-  return micros();
+  //return micros();
+  return syn::System::microseconds();
 #endif
 }
