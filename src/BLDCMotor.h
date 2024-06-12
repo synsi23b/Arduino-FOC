@@ -23,6 +23,8 @@ class BLDCMotor: public FOCMotor
      @param L  motor phase inductance - [H]
      */ 
     BLDCMotor(int pp,  float R = NOT_SET, float KV = NOT_SET, float L = NOT_SET);
+
+    virtual ~BLDCMotor(){}
     
     /**
      * Function linking a motor and a foc driver 

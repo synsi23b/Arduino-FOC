@@ -77,6 +77,8 @@ class FOCMotor
      */
     FOCMotor();
 
+    virtual ~FOCMotor(){}
+
     /**  Motor hardware init function */
   	virtual void init()=0;
     /** Motor disable function */
