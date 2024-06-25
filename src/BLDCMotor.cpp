@@ -421,8 +421,9 @@ void BLDCMotor::move(float new_target) {
       // angle set point
       shaft_angle_sp = target;
       // calculate velocity set point
-      shaft_velocity_sp = feed_forward_velocity + P_angle( shaft_angle_sp - shaft_angle );
-      shaft_velocity_sp = _constrain(shaft_velocity_sp,-velocity_limit, velocity_limit);
+      //shaft_velocity_sp = feed_forward_velocity + P_angle( shaft_angle_sp - shaft_angle ); // 15 month old stuff that is not used
+      //shaft_velocity_sp = _constrain(shaft_velocity_sp,-velocity_limit, velocity_limit); // P_angle already constrains velocity
+      shaft_velocity_sp = P_angle( shaft_angle_sp - shaft_angle );
       // calculate the torque command - sensor precision: this calculation is ok, but based on bad value from previous calculation
       current_sp = PID_velocity(shaft_velocity_sp - shaft_velocity); // if voltage torque control
       // if torque controlled through voltage
